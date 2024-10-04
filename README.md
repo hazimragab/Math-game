@@ -85,7 +85,19 @@ public class Main {
       } else
         System.out.println("Incorrect. The correct answer is " + (num1 / num2) + "\n");
 
-      if(num == 4)
+      num1 = (int) (Math.random() * 100 * start * level + 1);
+      numDone++;
+      System.out.println("What is " + num1 + " squared?");
+      answer = scanner.nextInt();
+      if (answer == Math.pow(num1, 2)) {
+        System.out.println("Correct! Good job!" + "\n");
+        points += 5;
+        numCorrect++;
+        num++;
+      } else
+        System.out.println("Incorrect. The correct answer is " + Math.pow(num1, 2) + "\n");
+      
+      if(num == 5)
         level++;
     }
   }
